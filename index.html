@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type=text/css href="{{ url_for('static', filename= 'style.css') }}">
+    <title>AI SUMMARY CREATOR</title>
+</head>
+
+<body>
+    
+        <nav>
+           <div><h2><span>AI</span> SUMMARY CREATOR</h2></div>
+           <div>
+            <ul>
+                <li><a href="#" class="op">HOME</a></li>
+                <li><a href="#">SUMMARY</a></li>
+                <li><a href="#">UPLOAD IMAGE</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="uploadimage" class="section">
+    <div class="container">
+    
+   
+        <center><h2 id="txt">UPLOAD TEXT IMAGE TO BE SUMMARIZED</h2></center></div>
+        <br>
+        <form action="/input/image" method="post"  enctype="multipart/form-data">
+            <center><input type="file" name="file" name="filename"></center><br>
+            <center><button>Summarize</button> </center><br> 
+        </form>
+    </div>
+
+
+    <section id="summary" class="section"></section>
+            <div class="container">
+                <br>
+                <center><div> <h2>SUMMARIZED TEXT</h2></div></center>
+                <br>
+               <div><form method="post">
+                <center> <textarea style="text-align:justify; width:750px; height:500px; border-radius: 20px;">{{result}}</textarea></center><br>
+                </form>
+            </div>
+        </div>
+    </section>
+        
+    
+
+    
+
+ 
+    
+    
+</body>
+</html>
